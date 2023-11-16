@@ -8,7 +8,7 @@ If you are on Ubuntu 22.04, skip step 1 and go straight to application installat
 1. Your CPU MUST have the capability to run nested virtualization. Some known issues with this include devices running MacOS with an Intel chip. Check according to your operating system. 
 2. A minimum of 50GB of storage space allocated to your VM or your computer if you are on Ubuntu.
 
-# Overview
+## Overview
 1. Set up Ubuntu 22.04 VM (Skip if you are on Ubuntu 22.04)
 2. Set up Android Studio and Desktop Environment
 3. Create Project
@@ -91,6 +91,7 @@ sudo adduser yourusername kvm
 ```
 sudo kvm-ok
 ```
+If both these prerequisites are not met, Android Studio will crash if you attempt to run the emulator.
 
 ## 3. Create Project
 1. From Android Studio, choose: File > New > New Project and configure your project. Minimum API level should be API 23: Android 6.0 (Marshmallow).
