@@ -4,6 +4,10 @@ This is a set up guide for configuring your desktop environment to run the Andro
 
 If you are on Ubuntu 22.04, skip step 1 and go straight to application installation.
 
+### Prerequisites
+1. Your CPU MUST have the capability to run nested virtualization. Some known issues with this include devices running MacOS with an Intel chip. Check according to your operating system. 
+2. A minimum of 50GB of storage space allocated to your VM or your computer if you are on Ubuntu.
+
 # Overview
 1. Set up Ubuntu 22.04 VM (Skip if you are on Ubuntu 22.04)
 2. Set up Android Studio and Desktop Environment
@@ -12,10 +16,6 @@ If you are on Ubuntu 22.04, skip step 1 and go straight to application installat
 
 ## 1. Set up an Ubuntu 22.04 VM
 
-### Prerequisites
-1. Your CPU MUST have the capability to run nested virtualization. Some known issues with this include devices running MacOS with an Intel chip. Check according to your operating system. 
-2. A minimum of 50GB of storage space allocated to your VM.
-- - - 
 ### Windows Hyper-V Set up
 Follow this tutorial to create your VM using Hyper-V https://phoenixnap.com/kb/hyper-v-ubuntu
 Make sure you are installing Ubuntu 22.04. 
@@ -69,18 +69,19 @@ sudo apt install qemu-kvm
 sudo adduser yourusername kvm
 ```
 3. Relink the correct libraries
-   1. Navigate to the API lib folder
-```
-cd /home/$USER/.local/share/Softbank Robotics/RobotSDK/API 7/tools/lib
-```
-   2. Back up the old library
-```
-mv libz.so.1 libz.so.1.bak
-```
-   3. Relink the System one
-```
-ln -s /usr/lib/x86_64-linux-gnu/libz.so libz.so.1
-```
+
+-> 1. Navigate to the API lib folder
+   ```
+   cd /home/$USER/.local/share/Softbank Robotics/RobotSDK/API 7/tools/lib
+   ```
+-> 2. Back up the old library
+   ```
+   mv libz.so.1 libz.so.1.bak
+   ```
+-> 3. Relink the System one
+   ```
+   ln -s /usr/lib/x86_64-linux-gnu/libz.so libz.so.1
+   ```
 4. Restart Android Studio
 5. Make sure you can run virtualization by running the following command:
 ```
