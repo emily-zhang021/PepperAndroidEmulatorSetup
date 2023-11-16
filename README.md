@@ -1,6 +1,6 @@
 # Pepper Android Emulator Setup
 
-This is a set up guide for configuring your desktop environment to run the Android Studio Pepper emulator. Following the original installation tutorial https://qisdk.softbankrobotics.com/sdk/doc/pepper-sdk/ch1_gettingstarted/installation.html#installation will result in the Pepper emulator crashing. 
+This is a set up guide for configuring your desktop environment to run the Android Studio Pepper emulator. Following the [original installation tutorial](https://qisdk.softbankrobotics.com/sdk/doc/pepper-sdk/ch1_gettingstarted/installation.html#installation) will result in the Pepper emulator crashing. 
 
 If you are on Ubuntu 22.04, skip step 1 and go straight to application installation.
 
@@ -17,11 +17,11 @@ If you are on Ubuntu 22.04, skip step 1 and go straight to application installat
 ## 1. Set up an Ubuntu 22.04 VM
 
 ### Windows Hyper-V Set up
-Follow this tutorial to create your VM using Hyper-V https://phoenixnap.com/kb/hyper-v-ubuntu
+Follow this tutorial to [create your VM using Hyper-V](https://phoenixnap.com/kb/hyper-v-ubuntu)
 Make sure you are installing Ubuntu 22.04. 
 
 ### Other OS VirtualBox Set up
-Follow this tutorial to create your VM using VirtualBox https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview
+Follow this tutorial to [create your VM using VirtualBox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview)
 Make sure you are installing Ubuntu 22.04. 
 
 ## 2. Set up Android Studio and Desktop Environment
@@ -96,10 +96,12 @@ If both these prerequisites are not met, Android Studio will crash if you attemp
 ## 3. Create Project
 1. From Android Studio, choose: File > New > New Project and configure your project. Minimum API level should be API 23: Android 6.0 (Marshmallow).
 2. Configure your project by navigating to File > Project Structure… > Module and make sure Source Compatibility and Target Compatibility are set to 1.8 (Java 8). Also make sure the Compile SDK is 29 and Build Tools version is 29.0.3.
-![image](https://github.com/emily-zhang021/PepperAndroidEmulatorSetup/assets/52023695/fc46b3a7-64a9-4c71-a869-046c9b8c58cc)
 
-4. Modify the Gradle JDK to also be 1.8 by going to the same Project Structure window -> SDK Location -> Gradle Settings
-![image](https://github.com/emily-zhang021/PepperAndroidEmulatorSetup/assets/52023695/2bbc6822-d30c-4e74-a0c3-f11a6ebb6e36)
+   ![image](https://github.com/emily-zhang021/PepperAndroidEmulatorSetup/assets/52023695/fc46b3a7-64a9-4c71-a869-046c9b8c58cc)
+
+4. Modify the Gradle JDK to also be 1.8 by going to the same Project Structure window -> SDK Location -> Gradle Settings.
+
+   ![image](https://github.com/emily-zhang021/PepperAndroidEmulatorSetup/assets/52023695/2bbc6822-d30c-4e74-a0c3-f11a6ebb6e36)
 
 6. Restart Android Studio and open your project. Choose File -> New -> Robot Application to robotify your current project.
 7. Depending on your language (Kotlin or Java) copy the code snippet from [step 4](https://qisdk.softbankrobotics.com/sdk/doc/pepper-sdk/ch1_gettingstarted/starting_project.html) into your MainActivity class.
